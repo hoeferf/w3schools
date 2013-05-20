@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<div>evaluate date</div>
+	<p id="demo"></p>
+	<button type="button" onclick="dateToGreetings()">Click me</button>
+	<script>
+		function dateToGreetings() {
+			var d = new Date().getHours();
+			var x = new String;
+			if (d < 17) {
+				x = "Good day"
+			} else if (d < 22) {
+				x = "Good evening"
+			} else {
+				x = "Good night"
+			}
+
+			document.getElementById("demo").innerHTML=x;
+		}
+	</script>
+</body>
+</html>

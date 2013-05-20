@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to call a function with arguments</p>
+
+<button onclick="alertProduct(3,4)">Try it with 3,4</button>
+<button onclick="alertProduct(4,3)">Try it with 4,3</button>
+<script>
+function alertProduct(a,b){
+	alert("Result: "+product(a,b))
+}
+function product(a,b){
+	if (a>b)
+		return a*b
+	else
+		return
+}
+
+</script>
+</body>
+</html>

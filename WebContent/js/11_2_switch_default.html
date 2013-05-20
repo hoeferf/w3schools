@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<div>evaluate date</div>
+	<p id="demo"></p>
+	<button type="button" onclick="dateToWeekday()">Click me</button>
+	<script>
+		function dateToWeekday() {
+			var d = new Date().getDay();
+			var x = new String;
+			switch (d) {
+			    case 0:
+				  x="Today it's Sunday";
+				  break;
+				case 6:
+				  x="Today it's Saturday";
+				  break;
+				default:
+					x="Looking forward to the Weekend";
+			}
+			document.getElementById("demo").innerHTML=x;
+		}
+	</script>
+</body>
+</html>

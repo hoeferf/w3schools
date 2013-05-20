@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<p>Test error handling</p>
+<p id="demo"></p>
+<button type="button" onclick="myFunction()">Click me</button>
+<script type="text/javascript">
+function myFunction(){
+	var x="";
+	try {
+		addlert("test alert");
+	}
+	catch (err) {
+		x="An error happend.\n\n";
+		x+="Error message: "+err.message+"\n\n";
+		x+="Click OK to continue";
+	}
+	alert(x);
+}
+</script>
+
+
+</body>
+</html>
