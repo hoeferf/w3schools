@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<p>toggle image</p>
+	<button type="button" onclick="toggleSrc()">click to toggle
+		image</button>
+	<br>
+	<img id="Image" src="smiley.gif" width="150" height="150">
+	<script>
+		function toggleSrc() {
+			if (document.getElementById("Image").src.match("landscape.jpg"))
+			{
+				document.getElementById("Image").src = "smiley.gif";
+			}
+			else {
+				document.getElementById("Image").src = "landscape.jpg";
+			}
+		}
+	</script>
+</body>
+</html>

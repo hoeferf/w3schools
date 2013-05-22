@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div id="main">
+		<p>This is a DOM demo</p>
+		<p>This is the second paragraph</p>
+	</div>
+	<script>
+		var x = document.getElementById("main");
+		var y = x.getElementsByTagName("p");
+		document.write("The second paragraph HTML contains the text \' "
+				+ y[1].innerHTML + "\'");
+	</script>
+</body>
+</html>
