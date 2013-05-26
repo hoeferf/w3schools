@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function Address(firstname, lastname, city){
+	this.firstname = firstname;
+	this.lastname = lastname;
+	this.city = city;
+
+	
+	this.address = function(){ 
+		alert(getFullname(this.firstname, this.lastname) + " from " + this.city)
+	}
+	
+	function getFullname(firstname, lastname) {
+		return  firstname + " " + lastname;
+	}
+}
+
+</script>
+</head>
+<body>
+<script>
+var address = new Address("Fred", "Feuerstein", "Wiesloch");
+address.address();
+// address.getFullname();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function getOriginal(x,y) {
+		document.getElementById(x).innerHTML = y;
+	}
+	function scalar(x) {
+		x += 5;
+		document.getElementById("valueFun").innerHTML = x;
+	}
+
+	function array(x) {
+		x[0] += 5;
+		document.getElementById("valueFun").innerHTML = x[0];
+	}
+	function object(x){
+		x.firstname="Barney";
+		document.getElementById("valueFun").innerHTML = x.firstname;		
+	}
+	function changeValues(x) {
+		var y = 2;
+		var z=[2,3];
+		var o={firstname:"Fred", lastname:"Feuerstein"};
+		document.getElementById("fun").innerHTML = x;
+		switch (x) {
+		case "scalar": 
+			getOriginal("before",y);			
+			scalar(y);
+			getOriginal("after",y);
+			break;
+		case "array":
+			getOriginal("before",z[0]);			
+			array(z);
+			getOriginal("after",z[0]);
+			break;
+		case "object":
+			getOriginal("before",o.firstname);
+			object(o);
+			getOriginal("after",o.firstname);
+			break;			
+		default: throw "undefined value";
+		}
+	}
+</script>
+</head>
+<body>
+	<button type="button" onClick='changeValues("scalar")'>scalar</button>
+	<button type="button" onClick='changeValues("array")'>array</button>
+	<button type="button" onClick='changeValues("object")'>object</button>
+	<div>Name of function:</div>
+	<div id="fun"></div>
+	<br>	
+	<div>value before function call:</div>
+	<div id="before"></div>
+	<br>
+	<div>value within function:</div>
+	<div id="valueFun"></div>
+	<br>	
+	<div>Value after function call:</div>
+	<div id="after"></div>
+
+</body>
+</html>

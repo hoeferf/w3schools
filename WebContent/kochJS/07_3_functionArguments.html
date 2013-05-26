@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function sum(){
+	var x=0;
+	for(i=0;i<sum.arguments.length;i++){
+		x+=sum.arguments[i];
+	}
+	document.getElementById("sum").innerHTML=x;
+}
+</script>
+</head>
+<body>
+<button type="button" onclick=sum(1,2)>Summe von 1 und 2</button>
+<button type="button" onclick=sum(1,3,2)>Summe von 1,3 und 2</button>
+<button type="button" onclick=sum(1,3,5,2)>Summe von 1,3,5 und 2</button>
+<br>
+<div id="sum"></div>
+</body>
+</html>
